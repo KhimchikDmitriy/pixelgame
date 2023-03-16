@@ -71,6 +71,7 @@ function gameLogic() {
     ) {
       clearInterval(end);
       clearInterval(doom);
+      clearInterval(level);
       fireball.remove();
       userScore.innerHTML = score;
       userScore.parentNode.classList.add("hide");
@@ -80,9 +81,12 @@ function gameLogic() {
       fireballPosY++;
       fireball.style.top = `${fireballPosY}px`;
     }
+    if (fireballPosY === 900) {
+      fireball.remove();
+    }
   }, 5);
 }
-setInterval(function () {
+let level = setInterval(function () {
   score++;
   userScore.innerHTML = score;
 }, 5000);
