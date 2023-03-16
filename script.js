@@ -13,10 +13,7 @@ startBTN.addEventListener("click", (event) => {
   event.preventDefault();
   screens[0].classList.add("up");
 });
-
-let doom = setInterval(() => {
-  gameLogic();
-}, 250);
+let doom = setInterval(() => gameLogic(), 250);
 
 /*Игрок*/
 document.addEventListener("keydown", (event) => {
@@ -35,17 +32,6 @@ document.addEventListener("keydown", (event) => {
       if (ggPos === 0) ggPos += 20;
       gg.style.background = "url(./img/game-gg-right.gif)";
       break;
-    case "w":
-    case "ц":
-      let ult = document.createElement("div");
-      ult.classList.add("ult");
-      let u1 = (ult.style.top = 370 + "px");
-      let u2 = (ult.style.left = gg.style.left - 50);
-      board.appendChild(ult);
-      if (u1 === 300 && !(u2 - 32 >= x || u2 == x || u2 + 32 <= x)) {
-        figure.remove();
-      }
-      break;
   }
 });
 
@@ -63,7 +49,6 @@ function gameLogic() {
   fireball.style.left = `${x}px`;
   fireball.style.background = "url(./img/vremenno2.gif)";
   board.append(fireball);
-
   let end = setInterval(() => {
     if (
       fireballPosY === 730 &&
@@ -81,16 +66,13 @@ function gameLogic() {
       fireballPosY++;
       fireball.style.top = `${fireballPosY}px`;
     }
-    if (fireballPosY === 900) {
-      fireball.remove();
-    }
+    if (fireballPosY === 900) fireball.remove();
   }, 5);
 }
 let level = setInterval(function () {
   score++;
   userScore.innerHTML = score;
 }, 5000);
-
 function randome(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
