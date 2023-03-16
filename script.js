@@ -1,4 +1,4 @@
-/*Переменные и константы*/
+//Переменные
 const screens = document.querySelectorAll(".screen");
 const board = document.querySelector(".board");
 const gg = document.querySelector(".gg");
@@ -8,14 +8,14 @@ let ggPos = 500;
 let score = 0;
 userScore.innerHTML = score;
 
-/*Начало игры*/
+//Начало игры
 startBTN.addEventListener("click", (event) => {
   event.preventDefault();
   screens[0].classList.add("up");
 });
 let doom = setInterval(() => gameLogic(), 250);
 
-/*Игрок*/
+//Игрок
 document.addEventListener("keydown", (event) => {
   switch (event.key) {
     case "ArrowRight":
@@ -35,7 +35,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-/*Создание и логика поведения фигур*/
+//Логика игры
 function gameLogic() {
   const fireball = document.createElement("div");
   const { width } = board.getBoundingClientRect();
@@ -69,7 +69,7 @@ function gameLogic() {
     if (fireballPosY === 900) fireball.remove();
   }, 5);
 }
-let level = setInterval(function () {
+let level = setInterval(() => {
   score++;
   userScore.innerHTML = score;
 }, 5000);
