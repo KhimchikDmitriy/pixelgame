@@ -1,0 +1,71 @@
+body {
+  /* height: 100vh; */
+  overflow: hidden;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+a {
+  transition: 3s;
+  color: #1b8bd0;
+  text-decoration: none;
+}
+a:hover {
+  transition: 3s;
+  color: #ce2c2c;
+}
+.start {
+  font-size: 1.5rem;
+}
+h1 {
+  line-height: 1.4;
+  font-size: 4rem;
+  margin: 5px;
+}
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background: url(./img/vremenno.gif);
+  /* background-color: aquamarine; */
+}
+.screen.up {
+  margin-top: -100vh;
+}
+.screen.down {
+  margin-top: 0vh;
+}
+.hide {
+  opacity: 0;
+}
+.board {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /* background: #1d1d1d; */
+  width: 90vh;
+  height: 90vh;
+  overflow: hidden;
+}
+.gg {
+  top: 850px;
+  left: 500px;
+  width: 113px;
+  height: 116px;
+  /* box-shadow: 0 0 3px rgb(255, 255, 255); */
+  background: url(./img/game-gg.gif);
+  position: absolute;
+}
+.fireball,
+.ult {
+  position: absolute;
+}
+.ult {
+  width: 50px;
+  height: 5px;
+  background: #1b8bd0;
+}
