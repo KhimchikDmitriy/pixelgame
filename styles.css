@@ -1,9 +1,15 @@
+@font-face {
+  font-family: "beer money";
+  src: url("./fonts/beer-money12.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-  /* height: 100vh; */
   overflow: hidden;
   margin: 0;
   color: #fff;
   text-align: center;
+  font-family: "beer money";
 }
 a {
   transition: 3s;
@@ -13,9 +19,6 @@ a {
 a:hover {
   transition: 3s;
   color: #ce2c2c;
-}
-.start {
-  font-size: 1.5rem;
 }
 h1 {
   line-height: 1.4;
@@ -29,16 +32,13 @@ h1 {
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  background: url(./img/vremenno.gif);
+  background: url(./img/bckg.gif);
   /* background-color: aquamarine; */
 }
 .screen.up {
   margin-top: -100vh;
 }
-.screen.down {
-  margin-top: 0vh;
-}
-.hide {
+.opacity {
   opacity: 0;
 }
 .board {
@@ -49,7 +49,6 @@ h1 {
   /* background: #1d1d1d; */
   width: 90vh;
   height: 90vh;
-  /* overflow: hidden; */
 }
 .gg {
   top: 850px;
@@ -60,12 +59,6 @@ h1 {
   background: url(./img/game-gg.gif);
   position: absolute;
 }
-.fireball,
-.ult {
+.fireball {
   position: absolute;
-}
-.ult {
-  width: 50px;
-  height: 5px;
-  background: #1b8bd0;
 }
