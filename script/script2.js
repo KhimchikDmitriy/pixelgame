@@ -64,7 +64,7 @@ function gameLogic() {
   fireball.style.height = `50px`;
   fireball.style.top = `${y}px`;
   fireball.style.left = `${x}px`;
-  fireball.style.background = "url(./img/bat.gif)";
+  fireball.style.background = "url(../img/bat.gif)";
   board.append(fireball);
 
   let end = setInterval(() => {
@@ -79,7 +79,7 @@ function gameLogic() {
       userScore.innerHTML = score;
       userScore.parentNode.classList.add("opacity");
       board.innerHTML = `<h1>YOU DIE <br/> Ваш счёт: <span class = "primary">${score}<span> <br/>
-      <a class="start" onclick='window.location.reload()'>заново</a><br/><a class="start" href ='./index.html'>в главное меню</a>`;
+      <a class="start" onclick='window.location.reload()'>заново</a><br/><a class="start" href ='../index.html'>в главное меню</a>`;
       audioVampire.pause();
       audioDead.play();
     } else {

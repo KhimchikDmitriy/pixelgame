@@ -6,7 +6,7 @@ const screens = document.querySelectorAll(".screen"),
   userScore = document.querySelector(".score"),
   startBTN = document.querySelector("#start");
 
-let audioMagician = document.getElementById("music-magician");
+let audioMain = document.getElementById("music-main");
 let audioDead = document.getElementById("music-dead");
 
 let ggPos = 500,
@@ -64,7 +64,7 @@ function gameLogic() {
   fireball.style.height = `120px`;
   fireball.style.top = `${y}px`;
   fireball.style.left = `${x}px`;
-  fireball.style.background = "url(./img/fireball.gif)";
+  fireball.style.background = "url(../img/fireball.gif)";
   board.append(fireball);
 
   let end = setInterval(() => {
@@ -79,8 +79,8 @@ function gameLogic() {
       userScore.innerHTML = score;
       userScore.parentNode.classList.add("opacity");
       board.innerHTML = `<h1>YOU DIE <br/> Ваш счёт: <span class = "primary">${score}<span> <br/>
-      <a class="start" onclick='window.location.reload()'>заново</a><br/><a class="start" href ='./index.html'>в главное меню</a>`;
-      audioMagician.pause();
+      <a class="start" onclick='window.location.reload()'>заново</a><br/><a class="start" href ='../index.html'>в главное меню</a>`;
+      audioMain.pause();
       audioDead.play();
     } else {
       fireball_Y++;

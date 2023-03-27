@@ -6,7 +6,7 @@ const screens = document.querySelectorAll(".screen"),
   userScore = document.querySelector(".score"),
   startBTN = document.querySelector("#start");
 
-let audioMain = document.getElementById("music-main");
+let audioMagician = document.getElementById("music-magician");
 let audioDead = document.getElementById("music-dead");
 
 let ggPos = 500,
@@ -31,14 +31,14 @@ document.addEventListener("keydown", (event) => {
     case "в":
       gg.style.left = `${(ggPos += 5)}px`;
       if (ggPos === 850) ggPos -= 20;
-      gg.style.background = "url(./img/game-gg-right.gif)";
+      // gg.style.background = "url(./img/game-gg-right.gif)";
       break;
     case "ArrowLeft":
     case "a":
     case "ф":
       gg.style.left = `${(ggPos -= 5)}px`;
       if (ggPos === 0) ggPos += 20;
-      gg.style.background = "url(./img/game-gg-right.gif)";
+      // gg.style.background = "url(./img/game-gg-right.gif)";
       break;
   }
 });
@@ -64,7 +64,7 @@ function gameLogic() {
   fireball.style.height = `120px`;
   fireball.style.top = `${y}px`;
   fireball.style.left = `${x}px`;
-  fireball.style.background = "url(./img/fireball.gif)";
+  fireball.style.background = "url(../img/fireball.gif)";
   board.append(fireball);
 
   let end = setInterval(() => {
@@ -79,8 +79,8 @@ function gameLogic() {
       userScore.innerHTML = score;
       userScore.parentNode.classList.add("opacity");
       board.innerHTML = `<h1>YOU DIE <br/> Ваш счёт: <span class = "primary">${score}<span> <br/>
-      <a class="start" onclick='window.location.reload()'>заново</a><br/><a class="start" href ='./index.html'>в главное меню</a>`;
-      audioMain.pause();
+      <a class="start" onclick='window.location.reload()'>заново</a><br/><a class="start" href ='../index.html'>в главное меню</a>`;
+      audioMagician.pause();
       audioDead.play();
     } else {
       fireball_Y++;
