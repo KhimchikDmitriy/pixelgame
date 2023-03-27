@@ -79,7 +79,7 @@ function gameLogic() {
       userScore.innerHTML = score;
       userScore.parentNode.classList.add("opacity");
       board.innerHTML = `<h1>YOU DIE <br/> Ваш счёт: <span class = "primary">${score}<span> <br/>
-      <a class="start" href ='./index.html'>заново</a>`;
+      <a class="start" onclick='window.location.reload()'>заново</a><br/><a class="start" href ='./index.html'>в главное меню</a>`;
       audioMain.pause();
       audioDead.play();
     } else {

@@ -35,8 +35,14 @@ h1 {
   background: url(./img/bckg.gif);
   /* background-color: aquamarine; */
 }
-.screen.up {
-  margin-top: -100vh;
+#table {
+  position: relative;
+  top: -100%;
+  transition: top 5s;
+  width: 50%;
+  height: 35%;
+  background: #6f520d;
+  border-radius: 50px;
 }
 .opacity {
   opacity: 0;

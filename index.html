@@ -7,10 +7,19 @@
   <body>
     <div class="screen" style="background-image: url(./img/fon.gif)">
       <h1>Damnatum aeternum proelium</h1>
-      <h1><a id="start1" href="./lvl1.html">Уровень против мага</a></h1>
-      <h1><a id="start2" href="./lvl2.html">Уровень против вампира</a></h1>
-      <!-- <h1><a id="start3" href="./lvl3.html">Режим Горыныч</a></h1> -->
+      <h1><a onclick="menu()">выбор уровня</a></h1>
+      <div id="table">
+        <h1><a id="start1" href="./lvl1.html">Magical insidiator</a></h1>
+        <h1><a id="start2" href="./lvl2.html">Claustrum</a></h1>
+        <!-- <h1><a id="start3" href="./lvl3.html">Режим Горыныч</a></h1> -->
+      </div>
     </div>
     <audio autoplay loop id="music-main" src="./music/Main.mp3"></audio>
+    <script>
+      function menu() {
+        var div = document.getElementById("table");
+        div.style.top = "10%";
+      }
+    </script>
   </body>
 </html>
