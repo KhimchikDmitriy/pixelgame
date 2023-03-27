@@ -6,6 +6,9 @@ const screens = document.querySelectorAll(".screen"),
   userScore = document.querySelector(".score"),
   startBTN = document.querySelector("#start");
 
+let audioMagician = document.getElementById("music-magician");
+let audioDead = document.getElementById("music-dead");
+
 let ggPos = 500,
   score = 0,
   level = setInterval(() => {
@@ -77,6 +80,8 @@ function gameLogic() {
       userScore.parentNode.classList.add("opacity");
       board.innerHTML = `<h1>YOU DIE <br/> Ваш счёт: <span class = "primary">${score}<span> <br/>
       <a class="start" href ='./index.html'>заново</a>`;
+      audioMagician.pause();
+      audioDead.play();
     } else {
       fireball_Y++;
       fireball.style.top = `${fireball_Y}px`;
