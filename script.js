@@ -42,10 +42,10 @@ document.addEventListener("keydown", (event) => {
 
 //Игра
 
-startBTN.addEventListener("click", (event) => {
-  event.preventDefault();
-  screens[0].classList.add("up");
-});
+// startBTN.addEventListener("click", (event) => {
+// event.preventDefault();
+// screens[0].classList.add("up");
+// });
 
 let doom = setInterval(() => gameLogic(), 250);
 
@@ -76,13 +76,11 @@ function gameLogic() {
       userScore.innerHTML = score;
       userScore.parentNode.classList.add("opacity");
       board.innerHTML = `<h1>YOU DIE <br/> Ваш счёт: <span class = "primary">${score}<span> <br/>
-      <a class="start" onclick = 'window.location.reload();'>заново</a>`;
+      <a class="start" href ='./index.html'>заново</a>`;
     } else {
       fireball_Y++;
       fireball.style.top = `${fireball_Y}px`;
     }
     if (fireball_Y === 900) fireball.remove();
   }, 5);
-
-  // lvl 2
 }
