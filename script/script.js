@@ -6,15 +6,14 @@ const screens = document.querySelectorAll(".screen"),
   userScore = document.querySelector(".score"),
   startBTN = document.querySelector("#start");
 
-let audioMagician = document.getElementById("music-magician");
-let audioDead = document.getElementById("music-dead");
-
 let ggPos = 500,
   score = 0,
   level = setInterval(() => {
     score++;
     userScore.innerHTML = score;
-  }, 5000);
+  }, 5000),
+  audioMagician = document.getElementById("music-magician"),
+  audioDead = document.getElementById("music-dead");
 
 function randome(min, max) {
   return Math.round(Math.random() * (max - min) + min);
@@ -44,11 +43,6 @@ document.addEventListener("keydown", (event) => {
 });
 
 //Игра
-
-// startBTN.addEventListener("click", (event) => {
-// event.preventDefault();
-// screens[0].classList.add("up");
-// });
 
 let doom = setInterval(() => gameLogic(), 250);
 
