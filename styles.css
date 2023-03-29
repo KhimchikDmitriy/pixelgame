@@ -19,6 +19,7 @@ a {
 a:hover {
   transition: 3s;
   color: #ce2c2c;
+  cursor: pointer;
 }
 h1 {
   line-height: 1.4;
@@ -38,10 +39,10 @@ h1 {
 #table {
   position: relative;
   top: -100%;
-  transition: top 5s;
-  width: 50%;
-  height: 35%;
-  background: #6f520d;
+  transition: top 3s;
+  width: 500px;
+  height: 200px;
+  background: #50505088;
   border-radius: 50px;
 }
 .opacity {
